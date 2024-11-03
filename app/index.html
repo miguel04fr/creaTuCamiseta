@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js" defer></script>
+    <link rel="stylesheet" href="estilos/style.css">
     <title>Crea tu camiseta</title>
 </head>
 <body>
-    
+    <h1>Crea tu camiseta</h1>
+    <div id="contenedor">
+        <div id="panelIzquierdo">
+            <div id="contenedorTituloYMovimiento">
+                <label for="inputTituloCamisa">Título:</label>
+                <input type="text" id="inputTituloCamisa" placeholder="Escribe un título" maxlength="10">
+                <div id="progreso">
+                    <label for="barraX">Posición X:</label>
+                    <div class="slider-container">
+                        <input type="range" id="barraX" min="26" max="50" value="23" class="slider" oninput="updateBackground()">
+                    </div>
+                    <label for="barraY">Posición Y:</label>
+                    <div class="slider-container">
+                        <input type="range" id="barraY" min="20" max="50" value="20" class="slider" oninput="updateBackground()">
+                    </div>
+                </div>
+                
+            </div>
+            <div id="colorCamiseta">
+                <label>Colores:</label>
+                
+                <label for="colorNegro" class="color-label">
+                    <input type="radio" name="color" id="colorNegro" value="negro">
+                    <span class="color-box negro"></span> Negro
+                </label>
+                
+                <label for="colorBlanco" class="color-label">
+                    <input type="radio" name="color" id="colorBlanco" value="blanco">
+                    <span class="color-box blanco"></span> Blanco
+                </label>
+            </div>
+            <div id="imagenesCamisa">
+                <label>Imágenes (arrastra a la camiseta):</label>
+                <div class="image-row">
+                    <img src="img/imgCamisas/bleach.png" alt="Bleach" class="draggable-image" draggable="true">
+                    <img src="img/imgCamisas/1010191144544031893.webp" alt="Dora" class="draggable-image" draggable="true">
+                    <img src="img/imgCamisas/konotsuba-removebg-preview.png" alt="Konosuba" class="draggable-image" draggable="true">
+                </div>
+                <div class="image-row">
+                    <img src="img/imgCamisas/Capitulos_Pocoyó_Online_y_Descargar-removebg-preview.png" alt="Pocoyo" class="draggable-image" draggable="true">
+                    <img src="img/imgCamisas/pocoyo-removebg-preview.png" alt="Pocoyo" class="draggable-image" draggable="true">
+                    <img src="img/imgCamisas/fireForce1-removebg-preview.png" alt="FireForce" class="draggable-image" draggable="true">
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div id="panelDerecho">
+            <div id="camisetaVista">
+                <div id="contendorArriba">
+                    <div id="contenedorTitulo">Titulo</div>
+                    <div id="contenedorImgArriba"></div>
+                </div>
+                <div id="contendorImg"></div>
+                <div id="tituloImg"></div>
+                <p id="textoTitulo">Título</p>
+                <p id="textoPersonaje">CHARACTER</p>
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>

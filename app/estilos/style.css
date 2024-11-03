@@ -1,0 +1,327 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #d3d3d3;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;  
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 2em;
+    color: #444;
+   
+    text-align: center;
+}
+
+#contenedor {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #dadada;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 631px;
+}
+
+/* Panel izquierdo */
+#panelIzquierdo {
+    width: 35%;
+    padding: 10px;
+    border-right: 1px solid #e0e0e0;
+}
+
+#contenedorTituloYMovimiento {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 0.9em;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#inputTituloCamisa {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+#inputTituloCamisa:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+}
+
+.slider-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.slider:hover {
+    background: #ccc;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.slider::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.slider::-ms-track {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.slider::-ms-fill-lower {
+    background: #007bff;
+    border-radius: 5px;
+}
+
+.slider::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 5px;
+}
+
+
+#colorCamiseta {
+    margin-top: 20px;
+}
+
+#colorNegro, #colorBlanco {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+   
+}
+
+#colorNegro {
+    background-color: #333;
+}
+
+#colorBlanco {
+    background-color: #eee;
+}
+
+#imagenesCamisa {
+    margin: 20px; /* Espaciado alrededor del contenedor */
+}
+
+.image-row {
+    display: flex; /* Usamos flexbox para alinear las imágenes en una fila */
+    justify-content: space-around; /* Espaciado entre las imágenes */
+    margin-bottom: 10px; /* Espacio entre filas */
+}
+
+.image-row img {
+    max-width: 100px; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto; /* Mantiene la relación de aspecto */
+    cursor: grab; /* Cambia el cursor cuando se pasa sobre las imágenes */
+    border: 1px solid #ccc; /* Agrega un borde opcional para cada imagen */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: transform 0.2s; /* Transición suave para efectos al pasar el mouse */
+}
+
+.image-row img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
+}
+
+#imagenesCamisa img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+#imagenesCamisa img:hover {
+    transform: scale(1.05);
+}
+
+#panelDerecho {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#camisetaVista {
+    color: white;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    position: relative;
+    width: 100%;
+    max-width: 500px; 
+    height: 600px; 
+    background-image: url('../img/camiseta/black.png'); /* Imagen por defecto */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+#contenedorTitulo {
+    position: absolute;
+    top: 146px;
+    right: 296px;
+    width: 66px;
+    height: 40px;
+   
+
+}
+
+#contenedorImgArriba {
+    position: absolute;
+    top: 146px;
+    right: 135px;
+    width: 66px;
+    height: 40px;
+    img{
+        border-radius: 10px;
+
+        width:  60px;
+        height: 60px;
+    }
+}
+
+#contendorImg {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 170px;
+    height: 161px;
+    border-radius: 10px;
+    img{
+        border-radius: 10px;
+        width: 170px;
+        height: 161px;
+    }
+}
+#tituloImg{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 66px;
+    height: 20px;
+    border-radius: 10px;
+    
+}
+
+#textoTitulo {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+
+#textoPersonaje {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+#progreso{
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.color-label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: 1px solid #000;
+}
+
+.color-box.negro {
+    background-color: black;
+}
+
+.color-box.blanco {
+    background-color: white;
+}
